@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>First web page</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-        <h1><i>BOOKFAKE</i></h1>
+        <h1 style="color: blue"><i>BOOKFAKE</i></h1>
         Search: <input type="text" placeholder="Search by name">
 
         <br>
 
-        <h2>John Doe</h2>
-        <img src="profilePhoto.png" alt="defaultPhoto" style="width:250px;height:250px;">
+        <h2 style="color: blueviolet; background-color: orange">John Doe</h2>
+        <img src="profilePhoto.png" alt="defaultPhoto" style="width:250px;height:250px">
         <br>
         <br>
 
-        <button>Add a friend</button>
+        <button id="btnFriend">Add a friend</button>
+        <button id="btnEnemy">Remove a friend</button>
+        <button id="btnWave">Wave!</button>
         <br>
-
-        <p><strong>City:</strong> Unknown</p>
-        <p><strong>Age:</strong> 20+</p>
-        <p><strong>Education:</strong> Random University</p>
-        <p><strong>Hobby:</strong> QA</p>
-        <p><strong>FB friends:</strong> 1000</p>
-        <p><strong>FB enemies:</strong> over 9000</p>
-
+<ul>
+        <p class="list"><strong>City:</strong> Unknown</p>
+        <p class="list"><strong>Age:</strong> 20+</p>
+        <p class="list"><strong>Education:</strong> Random University</p>
+        <p class="list"><strong>Hobby:</strong> QA</p>
+        <p class="list"><strong>FB friends:</strong> 1000</p>
+        <p class="list"><strong>FB enemies:</strong> over 9000</p>
+</ul>
 </body>
 </html>
