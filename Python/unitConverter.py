@@ -8,3 +8,8 @@ while True:
     miles = 0.62137119
     result = (km * miles)
     print("This is equivavlent to " + str(result) + " miles.")
+    convertAgain = input("Would you like to convert again?")
+    if convertAgain == "No" or convertAgain == "N" or convertAgain == "no" or convertAgain == "n":
+        print("Thanks for using the app.")
+        break
+        
