@@ -20,6 +20,8 @@ class Hrana(Zivila):
         super().__init__(ime, kalorije, priljubljenost)
         self.teza = teza
 
+    def __repr__(self):
+        return f"{self.ime} je težek {self.teza}"
 
 class Pijaca(Zivila):
     volumen = None
@@ -44,3 +46,4 @@ print(pivo.kalorije)
 
 caj.addSugar()
 print(caj.kalorije)
+print(krof)
