@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import Flask, render_template
-from flask import request
+from flask import request, make_response
 
 
 app = Flask(__name__)
@@ -21,9 +21,10 @@ def hairsaloon():
     return render_template("hairsaloon.html")
 
 
-@app.route("/aboutus/", methods=["GET"])
+@app.route("/aboutus/", methods=["GET", "POST"])
 def aboutus():
-    return render_template("fakebook.html")
+    user_name = request.cookies.get("user_name")
+    return render_template("fakebook.html", uname=user_name)
 
 
 @app.route("/contact", methods=["POST"])
@@ -31,7 +32,10 @@ def contact():
     contact_name = request.form.get("contact-name")
     contact_email = request.form.get("contact-email")
     contact_message = request.form.get("contact-message")
-    return render_template("savemsg.html", contact_name=contact_name, contact_email=contact_email, contact_message=contact_message)
+
+    response = make_response(render_template("savemsg.html", contact_name=contact_name, contact_email=contact_email, contact_message=contact_message))
+    response.set_cookie("user_name", contact_name)
+    return response
 
 
 @app.route("/count/")

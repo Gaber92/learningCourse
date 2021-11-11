@@ -38,7 +38,11 @@
 
 <div>
     <form method="post" action="/contact">
-    <input type="text" name="contact-name" placeholder="Enter your name">
+    {% if uname %}
+    <input type="text" name="contact-name" placeholder="Enter your name" value="{{uname}}">
+        {% else %}
+        <input type="text" name="contact-name" placeholder="Enter your name">
+            {% endif %}
     <br>
 
     <input type="email" name="contact-email" placeholder="Enter email address">
