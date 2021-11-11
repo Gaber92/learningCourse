@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>First web page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style2.css">
 
 </head>
 <body>
@@ -11,9 +11,8 @@
         Search: <input type="text" placeholder="Search by name">
 
         <br>
-
         <h2>John Doe</h2>
-        <img src="profilePhoto.png" alt="defaultPhoto">
+        <img src="/static/img/fb.jpeg" alt="fbPhoto">
         <br>
         <br>
 
@@ -34,6 +33,22 @@
   <div class="flex-item" onclick="openInstagram()"> <s1>Instagram</s1> </div>
   <div class="flex-item" onclick="openLinkedIn()"> <s1>LinkedIn</s1> </div>
   <div class="flex-item" onclick="openFacebook()"> <s1>Facebook</s1> </div>
+</div>
+
+
+<div>
+    <form method="post" action="/contact">
+    <input type="text" name="contact-name" placeholder="Enter your name">
+    <br>
+
+    <input type="email" name="contact-email" placeholder="Enter email address">
+    <br>
+
+    <textarea name="contact-message" placeholder="Enter your message"></textarea>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
 </div>
 </body>
 <script src="functions.js"></script>
