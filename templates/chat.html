@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple DB example</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <br>
+    <form action="/send-message" method="POST">
+        <input type="text" name="username" placeholder="Enter your username:">
+        <br>
+        <textarea name="message" id="message" cols="50" rows="10"></textarea>
+        <button type="submit">Send message</button>
+    </form>
+
+{% for message in messages %}
+    <li>{{message.author}}: {{message.message}}</li>
+{{% endfor %}}
+</body>
+</html>
